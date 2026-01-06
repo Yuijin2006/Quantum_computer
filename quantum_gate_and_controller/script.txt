@@ -1,0 +1,5 @@
+iverilog -o sim tb_quantum_system.v quantum_controller.v quantum_gate.v quantum_state.v measurement_unit.v lsfr_random.v fixed_point_mult.v
+
+vvp sim
+
+gtkwave quantum_system.vcd

@@ -1,3 +1,9 @@
-iverilog -o sim tb_bell_state.v "..\rtl\core\quantum_circuit.v" "..\rtl\gates\cnot_gate.v" "..\rtl\utils\fixed_point_add.v" "..\rtl\utils\fixed_point_mult.v"  "..\rtl\gates\hadamard_gate.v" "..\rtl\core\qubit_register.v"
+iverilog -o sim1 tb_bell_state.v "..\rtl\core\quantum_circuit.v" "..\rtl\gates\cnot_gate.v" "..\rtl\utils\fixed_point_add.v" "..\rtl\utils\fixed_point_mult.v"  "..\rtl\gates\hadamard_gate.v" "..\rtl\core\qubit_register.v"
+iverilog -o sim2 tb_cnot.v "..\rtl\gates\cnot_gate.v"
+iverilog -o sim3 .\tb_hadamard.v "..\rtl\gates\hadamard_gate.v" "..\rtl\utils\fixed_point_add.v" "..\rtl\utils\fixed_point_mult.v"
 
-vvp sim
+vvp sim1
+vvp sim2
+vvp sim3
+
+gtkwave bell_state.vcd

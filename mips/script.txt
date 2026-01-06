@@ -1,0 +1,5 @@
+iverilog -o sim.out tb_mips_qpu_top.v mips_qpu_top.v program_counter.v instruction_memory.v mips_decoder.v "..\quantum_gate_and_controller\quantum_controller.v" "..\quantum_gate_and_controller\lsfr_random.v" "..\quantum_gate_and_controller\measurement_unit.v" "..\quantum_gate_and_controller\quantum_gate.v" "..\quantum_gate_and_controller\quantum_state.v" "..\quantum-bell-state\rtl\utils\fixed_point_mult.v"
+
+vvp sim.out
+
+gtkwave mips_qpu.vcd
