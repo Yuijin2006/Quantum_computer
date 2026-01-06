@@ -7,8 +7,8 @@ module tb_arithmetic;
     wire ov_add, ov_mult;
 
     // Kết nối module cần test
-    fixed_point_add u_add (.a(A), .b(B), .out(Sum), .overflow(ov_add));
-    fixed_point_mult u_mult (.a(A), .b(B), .out(Prod), .overflow(ov_mult));
+    fixed_point_add u_add (.a(A), .b(B), .sum(Sum), .overflow(ov_add));
+    fixed_point_mult u_mult (.a(A), .b(B), .product(Prod), .overflow(ov_mult));
 
     // --- CẤU HÌNH GTKWAVE (QUAN TRỌNG) ---
     initial begin

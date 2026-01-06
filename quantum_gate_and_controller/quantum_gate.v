@@ -42,14 +42,14 @@ module quantum_gate(
     fixed_point_mult u_hadamard_alpha (
         .a(hadamard_sum),
         .b(INV_SQRT2),
-        .out(alpha_h_core),
+        .product(alpha_h_core),
         .overflow(ov_h_alpha)
     );
 
     fixed_point_mult u_hadamard_beta (
         .a(hadamard_diff),
         .b(INV_SQRT2),
-        .out(beta_h_core),
+        .product(beta_h_core),
         .overflow(ov_h_beta)
     );
     

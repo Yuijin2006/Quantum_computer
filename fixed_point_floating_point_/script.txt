@@ -1,0 +1,5 @@
+iverilog -o sim tb_arithmetic.v "..\quantum-bell-state\rtl\utils\fixed_point_add.v" "..\quantum-bell-state\rtl\utils\fixed_point_mult.v"
+
+vvp sim
+
+gtkwave wave.vcd

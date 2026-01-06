@@ -1,0 +1,3 @@
+iverilog -o sim tb_bell_state.v "..\rtl\core\quantum_circuit.v" "..\rtl\gates\cnot_gate.v" "..\rtl\utils\fixed_point_add.v" "..\rtl\utils\fixed_point_mult.v"  "..\rtl\gates\hadamard_gate.v" "..\rtl\core\qubit_register.v"
+
+vvp sim
