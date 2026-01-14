@@ -307,9 +307,9 @@ gtkwave <filename>.vcd
 
 ### Fixed-Point Format
 
-- **Q15.16**: 1 sign bit + 15 integer bits + 16 fractional bits (used in arithmetic core)
-- **Q16.16**: 1 sign bit + 15 integer bits + 16 fractional bits (used in quantum gates)
-- Range: approximately -32768 to +32767.999...
+- **Q15.16**: 32-bit signed format with 15 integer bits + 16 fractional bits (1 sign bit implicit in two's complement)
+- **Q16.16**: 32-bit signed format with 16 integer bits + 16 fractional bits (used in quantum gates)
+- Range: Q15.16 approximately -32768 to +32767.999..., Q16.16 approximately -65536 to +65535.999...
 - Precision: ~0.0000152 (1/65536)
 
 ### Quantum State Representation
