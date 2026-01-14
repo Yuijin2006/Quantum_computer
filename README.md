@@ -118,8 +118,8 @@ brew install icarus-verilog gtkwave
 ### Installation on Windows:
 
 Download and install from:
-- Icarus Verilog: http://bleez.sourceforge.net/
-- GTKWave: http://gtkwave.sourceforge.net/
+- Icarus Verilog: https://bleez.sourceforge.net/ or https://github.com/steveicarus/iverilog
+- GTKWave: https://gtkwave.sourceforge.net/
 
 ## Installation
 
