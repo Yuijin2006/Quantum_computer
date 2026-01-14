@@ -309,13 +309,15 @@ gtkwave <filename>.vcd
 
 The project uses 32-bit signed fixed-point arithmetic with 16 fractional bits:
 
-- **Format**: Qm.n where m = integer bits, n = fractional bits
-- **Q15.16**: Used in `fixed_point_floating_point_/` - 1 sign bit + 15 integer bits + 16 fractional bits
-- **Q16.16**: Used in `quantum_gate_and_controller/` - conceptually 16 integer bits (including sign) + 16 fractional bits
-- Both formats are functionally equivalent 32-bit signed representations with 16 fractional bits
+- **Format Notation**: Qm.n where m = integer bits, n = fractional bits
+- **Q15.16**: Used in `fixed_point_floating_point_/`
+  - Bit allocation: 1 sign + 15 integer + 16 fractional = 32 bits total
+- **Q16.16**: Used in `quantum_gate_and_controller/`
+  - Bit allocation: 16 signed integer (including sign) + 16 fractional = 32 bits total
+- **Equivalence**: Both formats are functionally equivalent 32-bit signed representations with 16 fractional bits
 - **Range**: Approximately -32768 to +32767.999...
 - **Precision**: ~0.0000152 (1/65536)
-- **Representation**: Integer value 1.0 = 0x00010000 (65536 in decimal)
+- **Representation**: The value 1.0 is stored as 0x00010000 (65536 in decimal)
 
 ### Quantum State Representation
 
